@@ -1,0 +1,75 @@
+{% extends 'howeydoin/base.html' %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{% block body %}
+  <div class="row px-5 py-5">
+    <div>
+      <h1>Frequently Asked Questions</h1>
+    </div>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+            Where did these recipes come from?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+            <strong>This was a collaborative effort.</strong> The recipes themselves came from recipes that have been passed down going back to at least my great-grandmother, Leona Roundy.
+            These recipes were then all compiled by Emily Howey, and then illustrated by Liz Howey. The book was then printed and handed off to me, Travis Howey, where I got everything together
+            and created this website
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+            What is your favorite recipe?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+          <div class="accordion-body">
+            My favorite recipe included in this site is my father's Chili Verde. I don't know how the man did it, but I truly believe that he has perfected the concept of Chili Verde. I eat
+            bowls and bowls of this alone. Top it off with chips and sour cream, and you have one heck of a soup. Find that recipe
+            <a href="http://127.0.0.1:8000/home/9">here</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+            Can I change up the recipes?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+          <div class="accordion-body">
+            <strong>ABSOLUTELY!</strong> These recipes are more of a jumping off point. If you want to change up the recipes in any way you are more than welcome to do so!
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+            What made you want to make this website?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+          <div class="accordion-body">
+            This was a project I had made for my class senior year of college. I was tasked with making a website in Django and this was the result of that. The idea of doing a recipe
+            website came from my love of cooking, and the incredible book that I had gotten only a few months prior that contained these recipes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

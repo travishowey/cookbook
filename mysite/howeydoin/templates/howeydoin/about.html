@@ -1,0 +1,58 @@
+{% extends 'howeydoin/base.html' %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{% block body %}
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>This website is a place to store and memorialize all family recipes from generation to generation</p>
+</div>
+
+<h2 style="text-align:center">Credits:</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Travis Howey</h2>
+        <p class="title">Website Builder</p>
+        <p>Travis built the website from scratch. Using Django, we were able to create a fluid website that will update
+            with each new recipe added, always allowing for more and more possibilites</p>
+        <p>travishoweydev@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Elizabeth Howey</h2>
+        <p class="title">Illustrator</p>
+        <p>Elizabeth beautifully illustrated the images that are seen on the pages. It was her idea to put the book
+        together in the first place and without her none of this would have come together.</p>
+        <p>orangehippo969@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Emily Howey</h2>
+        <p class="title">Project Manager</p>
+        <p>Emily put together the book itself. She gathered recipes, and coordinated the building of the recipe book.
+        She was also the one who financed the initial run of books.</p>
+        <p>emilyhowey@utah.gov</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+</body>
+</html>
