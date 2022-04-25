@@ -38,8 +38,8 @@ def aboutus(request):
     return render(request, 'howeydoin/about.html')
 
 
-def download(request, id):
-    recipe = Recipe.objects.get(pk=id)
+def download(request, item_id):
+    recipe = Recipe.objects.get(pk=item_id)
     template = loader.get_template('howeydoin/download.html')
     html = template.render({'recipe': recipe})
     options = {
