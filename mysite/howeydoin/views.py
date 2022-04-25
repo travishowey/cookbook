@@ -39,9 +39,9 @@ def aboutus(request):
 
 
 def download(request, id):
-    user_profile = Recipe.objects.get(pk=id)
+    recipe = Recipe.objects.get(pk=id)
     template = loader.get_template('howeydoin/download.html')
-    html = template.render({'user_profile': user_profile})
+    html = template.render({'recipe': recipe})
     options = {
         'page-size': 'Letter',
         'encoding': 'UTF-8'
