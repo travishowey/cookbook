@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.template import loader
 import pdfkit
 from .forms import ItemForm
+from django.core.paginator import Paginator
 from django.db.models import Q
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -28,6 +29,13 @@ def detail(request, item_id):
 
 def allrecipes(request):
     item_list = Recipe.objects.all()
+    recipe_search = request.GET.get('recipe_search')
+    if recipe_search != '' and recipe_search is not None:
+        item_list = item_list.filter(name__icontains=recipe_search)
+    paginator = Paginator(item_list, 5)
+    page = request.GET.get('page')
+    item_list = paginator.get_page(page)
+
     context = {
         'item_list': item_list,
     }

@@ -11,6 +11,34 @@
 </head>
 <body>
 {% block body %}
+<div class="about-section">
+  <h1>All of our recipes</h1>
+  <p>Feel free to browse at your own pace, or if you would rather, use the search bar!</p>
+</div>
+<div class="row pt-3">
+    <div class="col-md-3 offset-md-2">
+        <h4><strong>Page:</strong>{{ item_list.number }} of {{ item_list.paginator.num_pages }}</h4>
+    </div>
+    <div class="col-md-3 offset-md-4">
+        <form action="" method="GET">
+            <input type="search" name="recipe_search">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="col-md-3 offset-md-2">
+        {% if item_list.has_previous %}
+            <a href="?page=1"><strong>First</strong></a>
+            <a href="?page={{ item_list.previous_page_number }}"><strong>Previous</strong></a>
+        {% endif %}
+
+        {% if item_list.has_next %}
+            <a href="?page={{ item_list.next_page_number }}"><strong>Next</strong></a>
+            <a href="?page={{ item_list.paginator.num_pages }}"><strong>Last</strong></a>
+        {% endif %}
+    </div>
+</div>
+
+
 {% for item in item_list %}
     <div class="row pt-3">
         <div class="col-md-3 offset-md-2">
@@ -25,6 +53,8 @@
         </div>
     </div>
 {% endfor %}
+
+
 {% endblock %}
 </body>
 </html>
