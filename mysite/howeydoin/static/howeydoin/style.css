@@ -27,6 +27,10 @@ html {
   color: white!important
 }
 
+label {
+  font-weight: bold;
+}
+
 .column {
   float: left;
   width: 33.3%;
@@ -39,11 +43,12 @@ html {
   margin: 8px;
 }
 
+
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: #474e5d;
-  color: white;
+  background-color: #d3aebf;
+  color: #454545;
 }
 
 .container {

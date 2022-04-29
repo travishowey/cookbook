@@ -12,7 +12,10 @@
 </head>
 <body>
 {% block body %}
-<h1>{{ user.username }}</h1>
-<h2>{{ user.location }}</h2>
-<img src="{% static user.profile.image.url %}" width="250px">
+<div class="about-section">
+    <img src="{% static user.profile.image.url %}" width="250px">
+    <h1>{{ user.username }}</h1>
+</div>
+
+
 {% endblock %}
